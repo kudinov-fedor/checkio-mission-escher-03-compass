@@ -18,5 +18,16 @@ if (!global.is_checking) {
                              [ 0,  0, 0, 0,  0],
                              [ 0,  0, 0, 0,  0],
                              ['M', 0, 0, 0, 'S']]), 11)
+
+    assert.equal(navigation([[ 0,  0, 'C'],
+                             [ 0, 'S', 0],
+                             ['M','Y', 0]]), 4)
+
+    assert.equal(navigation([[ 0,  0, 0,  0,  0,  0,  0],
+                             [ 0,  0, 0, 'M', 0, 'S', 0],
+                             [ 0,  0, 0,  0,  0,  0,  0],
+                             [ 0,  0, 0, 'C', 0,  0,  0],
+                             [ 0, 'Y',0,  0,  0,  0,  0],
+                             [ 0,  0, 0,  0,  0,  0,  0]]), 9)
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
