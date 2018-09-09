@@ -1,0 +1,76 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}compass.jpg" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+一日にも満たない短い旅だから問題は何もないはずでした。
+しかし水平線上に島が見えてきた頃に恐るべき嵐がやってきました。
+あなたと船員たちが体験したことを言葉にするのは難しいほどです。
+実際に島にたどり着いた人々の中であなたは唯一の生存者になりました。
+荒波は双方の船を破壊し残っていた船底は最後は崖によって粉々になりました。
+他の船員の誰かがなんとか生き延びているかもしれませんがそれも望み薄です。
+今あなたには二つの仕事があります。
+城からハイパーキューブを取ってくること。そして呪われた島から脱出する方法を見つけること。<br>
+<br>
+一つずつ進めましょう。
+手始めに地形を把握するためにコンパスと地図と望遠鏡が必要です。
+急いで！
+自然は予測不可能です。
+もしこれらを時間内に入手できなければあなたは砂浜に埋もれるか海の藻屑となるでしょう。
+</div>
+
+<p>
+あなたの仕事は今いる場所から各々の品物を入手するのに必要なステップ数の合計を数えることです。('C' - コンパス), ('M' - 地図), ('S' - 望遠鏡) 
+今あなたがいる場所は 'Y' です。
+Y から C, M, S の各々への距離の合計であり、全ての品物を得るための最短距離( 例えば Y -> C -> M -> S) ではありません。<br>
+あなたは 8方向に歩けるのに注意して下さい。- 左, 右, 上, 下 そして斜め (いづれの斜め方向でも可能)
+</p>
+
+<div style="text-align: center">
+    <img src="{{MEDIA}}distances.jpg" style="max-height: 200px">
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> あなたと 3つの品物の位置をあらわした配列
+</p>
+
+<p>
+    <strong>出力: </strong> あなたから 3つの品物への距離の合計
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+navigation([['Y', 0, 0, 0, 'C'],
+            [ 0,  0, 0, 0,  0],
+            [ 0,  0, 0, 0,  0],
+            ['M', 0, 0, 0, 'S']]) == 11 //4 steps from Y to C, 4 from Y to S and 3 from Y to M
+</pre>
+{% else %}
+<pre class="brush: python">
+navigation([['Y', 0, 0, 0, 'C'],
+            [ 0,  0, 0, 0,  0],
+            [ 0,  0, 0, 0,  0],
+            ['M', 0, 0, 0, 'S']]) == 11 #4 steps from Y to C, 4 from Y to S and 3 from Y to M
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    道のりを測るのに使用できます
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    3x3 <= array size <= 10x10
+</p>
