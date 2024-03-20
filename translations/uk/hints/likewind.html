@@ -1,0 +1,63 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        Підкажіть, з чого почати вирішення цієї місії.
+    </div>
+    <div class="answer">
+        Перш за все вам потрібно визначити власні координати, а також координати C (compass), S (spyglass) та M (map).
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Ви могли би показати приклад коду?
+    </div>
+    <div class="answer">
+        Код буде виглядати наступним чином:
+        <pre class="brush: python">
+y = [0, 0]
+c = [0, 0]
+m = [0, 0]
+s = [0, 0]
+
+for i in range(len(seaside)):
+    for j in range(len(seaside[i])):
+        if seaside[i][j] == 'Y':
+            y = [i, j]
+        elif seaside[i][j] == 'C':
+            c = [i, j]
+        elif seaside[i][j] == 'M':
+            m = [i, j]
+        elif seaside[i][j] == 'S':
+            s = [i, j]
+        </pre>
+По-перше, ви створюєте змінні зі списками координат та присвоюєте їм значення [0, 0]. Після чого за допомогою циклу перевіряєте кожен елемент двовимірного масиву і записуєте його координати у відповідну змінну.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Як, знаючи координати, мені розрахувати загальну кількість кроків?
+    </div>
+    <div class="answer">
+        Вам потрібно визначити різницю координат між вашим місцеположенням та розташуванням однієї з речей, а потім обрати максимальне із двох значень - різницю по горизонталі та по вертикалі. Це можна зробити за допомогою <a href='https://docs.python.org/3/library/functions.html#max'>функції max()</a>.
+        Після чого вам буде потрібно виконати аналогічні дії для двох інших речей і підрахувати загальну суму трьох відстаней.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мені потрібен приклад коду, щоб розібратись.
+    </div>
+    <div class="answer">
+        Для зручності, ви можете описати дану частину рішення в окремій функції:
+        <pre class="brush: python">
+def dist(a, b):
+    return max(abs(a[0]-b[0]), abs(a[1]-b[1]))
+</pre>
+        де a та b - списки з координатами вашого місцеположення і координати однієї з речей.
+    </div>
+    </div>
+</div>
+</body>
